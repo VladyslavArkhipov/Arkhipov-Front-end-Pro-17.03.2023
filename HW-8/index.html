@@ -9,6 +9,62 @@
   <body>
     <script>
       let birthYear = prompt("What is your birth year?");
+      if (birthYear === null) {
+        alert("So sad that that you didn`t enter your birth year");
+      } else if (
+        isNaN(birthYear) ||
+        birthYear.trim() === "" ||
+        birthYear < 1920 ||
+        birthYear > 2022
+      ) {
+        alert("Not correct birth year. Try again.");
+      } else {
+        let city = prompt("What is your city?");
+        if (city === null) {
+          alert("So sad that that you didn`t enter the name of your city");
+        } else {
+          let sport = prompt("What is your favourite sport?");
+          if (sport === null) {
+            alert("So sad that that you didn`t enter your favourite sport");
+          } else {
+            let age = 2023 - +birthYear;
+            if (city.toLocaleLowerCase() === "kiev") {
+              alert(`
+                  You are ${age} years old
+                  You live in the capital of Ukraine
+                  `);
+            } else if (city.toLocaleLowerCase() === "washington") {
+              alert(`
+                  You are ${age} years old
+                  You live in the capital of USA
+                  `);
+            } else if (city.toLocaleLowerCase() === "london") {
+              alert(`
+                  You are ${age} years old
+                  You live in the capital of Great Britain
+                  `);
+            } else {
+              alert(`
+                  You are ${age} years old
+                  You live in ${city}
+                  `);
+            }
+            if (sport === "football") {
+              alert(`Cool! Do you want to be like Lionel Messi?`);
+            } else if (sport === "basketball") {
+              alert(`Cool! Do you want to be like LeBron James?`);
+            } else if (sport === "golf") {
+              alert(`Cool! Do you want to be like Tiger Woods?`);
+            } else {
+              alert(
+                `You choosed ${sport} as your favourite sport. Do you want to be the best?`
+              );
+            }
+          }
+        }
+      }
+
+      /* let birthYear = prompt("What is your birth year?");
       switch (true) {
         case birthYear === null:
           alert("So sad that that you didn`t enter your birth year");
@@ -80,7 +136,7 @@
                   }
               }
           }
-      }
+      } */
     </script>
   </body>
 </html>

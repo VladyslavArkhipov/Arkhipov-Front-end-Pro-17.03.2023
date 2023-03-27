@@ -8,59 +8,54 @@
   </head>
   <body>
     <script>
-      //Mathematical operator initialization
-      let mathematicalOperator = prompt(`
+      //First and second numbers initialization
+      let firstNumber = prompt("Enter first number");
+      let secondNumber = prompt("Enter second number");
+      // Right numbers checking
+      if (
+        isNaN(firstNumber.trim()) ||
+        isNaN(secondNumber.trim()) ||
+        firstNumber.trim() === "" ||
+        secondNumber.trim() === ""
+      ) {
+        alert(`Not a numbers`);
+      } else {
+        //Mathematical operator initialization
+        let mathematicalOperator = prompt(`
         Enter "add" if you want to get summ
         Enter "sub" if you want to get difference
         Enter "mult" if you want to get multiplication
         Enter "div" if you want to get division
         `);
-      //Right operators checking
-      if (
-        mathematicalOperator === "add" ||
-        mathematicalOperator === "sub" ||
-        mathematicalOperator === "mult" ||
-        mathematicalOperator === "div"
-      ) {
-        //First and second numbers initialization
-        let firstNumber = prompt("Enter first number").trim();
-        let secondNumber = prompt("Enter second number").trim();
-        // Right numbers checking
-        if (
-          isNaN(firstNumber) ||
-          isNaN(secondNumber) ||
-          firstNumber === "" ||
-          secondNumber === ""
-        ) {
-          alert(`Not a numbers`);
-        } else {
-          //Mathematical operator initialization and value calculating
-          let summOfNumbers = +firstNumber + +secondNumber;
-          let differenceOfNumbers = +firstNumber - +secondNumber;
-          let multiplicationOfNumbers = +firstNumber * +secondNumber;
-          let divisionOfNumbers = +firstNumber / +secondNumber;
-          //Output with choosed conditions
-          switch (mathematicalOperator) {
-            case "add":
-              alert(`${firstNumber} + ${secondNumber} = ${summOfNumbers}`);
-              break;
-            case "sub":
-              alert(
-                `${firstNumber} - ${secondNumber} = ${differenceOfNumbers}`
-              );
-              break;
-            case "mult":
-              alert(
-                `${firstNumber} * ${secondNumber} = ${multiplicationOfNumbers}`
-              );
-              break;
-            case "div":
-              alert(`${firstNumber} / ${secondNumber} = ${divisionOfNumbers}`);
-              break;
+        if (mathematicalOperator === "add") {
+          alert(
+            `${firstNumber} + ${secondNumber} = ${
+              Number(firstNumber) + Number(secondNumber)
+            }`
+          );
+        } else if (mathematicalOperator === "sub") {
+          alert(
+            `${firstNumber} - ${secondNumber} = ${
+              Number(firstNumber) - Number(secondNumber)
+            }`
+          );
+        } else if (mathematicalOperator === "mult") {
+          alert(
+            `${firstNumber} * ${secondNumber} = ${
+              Number(firstNumber) * Number(secondNumber)
+            }`
+          );
+        } else if (mathematicalOperator === "div") {
+          if (secondNumber.trim() != 0) {
+            alert(
+              `${firstNumber} / ${secondNumber} = ${
+                Number(firstNumber) / Number(secondNumber)
+              }`
+            );
+          } else {
+            alert("One of numbers is 0");
           }
-        }
-      } else {
-        alert("Wrong command");
+        } else alert("Wrong command");
       }
     </script>
   </body>
