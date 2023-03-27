@@ -8,7 +8,9 @@
   </head>
   <body>
     <script>
+      //Birth year initialization
       let birthYear = prompt("What is your birth year?");
+      //Right birth year or window canceling checking
       if (birthYear === null) {
         alert("So sad that that you didn`t enter your birth year");
       } else if (
@@ -20,14 +22,17 @@
         alert("Not correct birth year. Try again.");
       } else {
         let city = prompt("What is your city?");
+        //Window canceling checking
         if (city === null) {
           alert("So sad that that you didn`t enter the name of your city");
         } else {
           let sport = prompt("What is your favourite sport?");
+          //Window canceling checking
           if (sport === null) {
             alert("So sad that that you didn`t enter your favourite sport");
           } else {
             let age = 2023 - +birthYear;
+            //Conditions of variable 'city'
             if (city.toLocaleLowerCase() === "kiev") {
               alert(`
                   You are ${age} years old
@@ -49,6 +54,7 @@
                   You live in ${city}
                   `);
             }
+            //Conditions of variable 'sport'
             if (sport === "football") {
               alert(`Cool! Do you want to be like Lionel Messi?`);
             } else if (sport === "basketball") {
@@ -63,80 +69,6 @@
           }
         }
       }
-
-      /* let birthYear = prompt("What is your birth year?");
-      switch (true) {
-        case birthYear === null:
-          alert("So sad that that you didn`t enter your birth year");
-          break;
-        case isNaN(birthYear) ||
-          birthYear.trim() === "" ||
-          birthYear < 1920 ||
-          birthYear > 2022:
-          alert("Not correct birth year. Try again.");
-          break;
-        default:
-          let city = prompt("What is your city?");
-          switch (true) {
-            case city === null:
-              alert("So sad that that you didn`t enter the name of your city");
-              break;
-            default:
-              let sport = prompt("What is your favourite sport?");
-              switch (true) {
-                case sport === null:
-                  alert(
-                    "So sad that that you didn`t enter your favourite sport"
-                  );
-                  break;
-                default:
-                  let age = 2023 - +birthYear;
-                  let footballStar = "Lionel Messi";
-                  let basketballStar = "LeBron James";
-                  let golfStar = "Tiger Woods";
-                  switch (city.toLocaleLowerCase()) {
-                    case "kiev":
-                      alert(`
-                  You are ${age} years old
-                  You live in the capital of Ukraine
-                  `);
-                      break;
-                    case "washington":
-                      alert(`
-                  You are ${age} years old
-                  You live in the capital of USA
-                  `);
-                      break;
-                    case "london":
-                      alert(`
-                  You are ${age} years old
-                  You live in the capital of Great Britain
-                  `);
-                      break;
-                    default:
-                      alert(`
-                  You are ${age} years old
-                  You live in ${city}
-                  `);
-                  }
-                  switch (sport) {
-                    case "football":
-                      alert(`Cool! Do you want to be like ${footballStar}?`);
-                      break;
-                    case "basketball":
-                      alert(`Cool! Do you want to be like ${basketballStar}?`);
-                      break;
-                    case "golf":
-                      alert(`Cool! Do you want to be like ${golfStar}?`);
-                      break;
-                    default:
-                      alert(
-                        `You choosed ${sport} as your favourite sport. Do you want to be the best?`
-                      );
-                  }
-              }
-          }
-      } */
     </script>
   </body>
 </html>
