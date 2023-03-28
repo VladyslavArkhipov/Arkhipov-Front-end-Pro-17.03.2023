@@ -13,6 +13,8 @@
       let secondNumber = prompt("Enter second number");
       // Right numbers checking
       if (
+        firstNumber === null ||
+        secondNumber === null ||
         isNaN(firstNumber.trim()) ||
         isNaN(secondNumber.trim()) ||
         firstNumber.trim() === "" ||
