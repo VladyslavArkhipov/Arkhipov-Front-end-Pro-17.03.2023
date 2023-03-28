@@ -32,40 +32,41 @@
             alert("So sad that that you didn`t enter your favourite sport");
           } else {
             let age = 2023 - +birthYear;
-            //Conditions of variable 'city'
-            if (city.toLocaleLowerCase() === "kiev") {
-              alert(`
-                  You are ${age} years old
-                  You live in the capital of Ukraine
-                  `);
-            } else if (city.toLocaleLowerCase() === "washington") {
-              alert(`
-                  You are ${age} years old
-                  You live in the capital of USA
-                  `);
-            } else if (city.toLocaleLowerCase() === "london") {
-              alert(`
-                  You are ${age} years old
-                  You live in the capital of Great Britain
-                  `);
-            } else {
-              alert(`
-                  You are ${age} years old
-                  You live in ${city}
-                  `);
-            }
-            //Conditions of variable 'sport'
-            if (sport === "football") {
-              alert(`Cool! Do you want to be like Lionel Messi?`);
-            } else if (sport === "basketball") {
-              alert(`Cool! Do you want to be like LeBron James?`);
-            } else if (sport === "golf") {
-              alert(`Cool! Do you want to be like Tiger Woods?`);
-            } else {
-              alert(
-                `You choosed ${sport} as your favourite sport. Do you want to be the best?`
-              );
-            }
+            const cities = {
+              kiev: {
+                message: `You are ${age} years old 
+You live in the capital of Ukraine`,
+              },
+              washington: {
+                message: `You are ${age} years old 
+You live in the capital of USA`,
+              },
+              london: {
+                message: `You are ${age} years old 
+You live in the capital of Great Britain`,
+              },
+              defaultMessage: `You are ${age} years old
+You live in ${city}`,
+            };
+            const sports = {
+              football: {
+                message: `Cool! Do you want to be like Lionel Messi?`,
+              },
+              basketball: {
+                message: `Cool! Do you want to be like LeBron James?`,
+              },
+              golf: {
+                message: `Cool! Do you want to be like Tiger Woods?`,
+              },
+              defaultMessage: `You choosed ${sport} as your favourite sport. Do you want to be the best?`,
+            };
+
+            cities[city.toLocaleLowerCase()]
+              ? alert(cities[city.toLocaleLowerCase()].message)
+              : alert(cities.defaultMessage);
+            sports[sport.toLocaleLowerCase()]
+              ? alert(sports[sport.toLocaleLowerCase()].message)
+              : alert(sports.defaultMessage);
           }
         }
       }
