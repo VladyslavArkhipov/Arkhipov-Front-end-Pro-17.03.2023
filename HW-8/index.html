@@ -23,30 +23,26 @@
       } else {
         let city = prompt("What is your city?");
         //Window canceling checking
-        if (city === null) {
+        if (city === null || city === "") {
           alert("So sad that that you didn`t enter the name of your city");
         } else {
           let sport = prompt("What is your favourite sport?");
           //Window canceling checking
-          if (sport === null) {
+          if (sport === null || sport === "") {
             alert("So sad that that you didn`t enter your favourite sport");
           } else {
             let age = 2023 - +birthYear;
             const cities = {
               kiev: {
-                message: `You are ${age} years old 
-You live in the capital of Ukraine`,
+                message: `You are ${age} years old\n You live in the capital of Ukraine`,
               },
               washington: {
-                message: `You are ${age} years old 
-You live in the capital of USA`,
+                message: `You are ${age} years old\n You live in the capital of USA`,
               },
               london: {
-                message: `You are ${age} years old 
-You live in the capital of Great Britain`,
+                message: `You are ${age} years old\n You live in the capital of Great Britain`,
               },
-              defaultMessage: `You are ${age} years old
-You live in ${city}`,
+              defaultMessage: `You are ${age} years old\n You live in ${city}`,
             };
             const sports = {
               football: {
