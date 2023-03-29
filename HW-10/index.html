@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      while (true) {
+        let task = prompt("Enter the number of task");
+        if (task === null) {
+          alert("You canceled window");
+          break;
+        } else {
+          if (+task === 1) {
+            //1,2
+            let arrFromTenToTwenty = [];
+
+            for (let i = 10; i <= 20; i++) {
+              arrFromTenToTwenty.push(i);
+            }
+            alert(`1. String from 10 to 20: ${arrFromTenToTwenty.join()}\n`);
+          } else if (+task === 2) {
+            //2
+            let arrOfSquaresFromTenToTwenty = [];
+            for (let i = 10; i <= 20; i++) {
+              arrOfSquaresFromTenToTwenty.push(i ** 2);
+            }
+            alert(
+              `2. String of squares from 10 to 20: ${arrOfSquaresFromTenToTwenty.join()}`
+            );
+          } else if (+task === 3) {
+            //3
+            let arrOfMultSeven = [];
+            let seven = 7;
+            for (let i = 1; i <= 10; i++) {
+              arrOfMultSeven.push(`${seven} * ${i} = ${seven * i}\n`);
+            }
+            alert(
+              `3. Multiplication table for number 7:\n ${arrOfMultSeven.join(
+                " "
+              )}`
+            );
+          } else if (+task === 4) {
+            //4
+            let sum = 0;
+            for (let i = 0; i <= 15; i++) {
+              sum += i;
+            }
+            alert(`4. Sum from 1 to 15 is ${sum}`);
+          } else if (+task === 5) {
+            //5
+            let mult = 15;
+            for (let i = 15; i <= 35; i++) {
+              mult *= i;
+            }
+            alert(`5. Multiplication of numbers from 15 to 35 is:\n${mult}`);
+          } else if (+task === 6) {
+            //6
+            let averageSum = 0;
+            for (let i = 1; i <= 500; i++) {
+              averageSum += i;
+            }
+            alert(
+              `6. Average sum of numbers from 1 to 500 is:\n ${Math.floor(
+                averageSum / 499
+              )}`
+            );
+          } else if (+task === 7) {
+            //7
+            let sumFromThirtyToEighty = 0;
+            for (let i = 30; i <= 80; i += 2) {
+              sumFromThirtyToEighty += i;
+            }
+            alert(
+              `7. Output the sum of only even numbers in the range from 30 to 80 is:\n${sumFromThirtyToEighty}`
+            );
+          } else if (+task === 8) {
+            //8
+            let arrOfDiv = [];
+            for (let i = 100; i <= 200; i++) {
+              if (i % 3 === 0) {
+                arrOfDiv.push(i);
+              }
+            }
+            alert(
+              `8. All numbers in the range from 100 to 200 multiples of 3 are:\n${arrOfDiv.join()}`
+            );
+          } else if (+task === 9 || +task === 10 || +task === 11) {
+            //9,10,11
+            let number = prompt("Enter the number");
+            if (isNaN(Number(number)) || number.trim() === "") {
+              console.log(`Not a number`);
+            } else {
+              let arrOfNumbers = [];
+              let arrOfPareNumbers = [];
+              let sumOfPareNumbers = 0;
+
+              for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                  arrOfNumbers.push(i);
+                  if (i % 2 === 0) {
+                    arrOfPareNumbers.push(i);
+                    sumOfPareNumbers += i;
+                  }
+                }
+              }
+              if (+task === 9) {
+                alert(
+                  `9. Divisors of your number are:\n${arrOfNumbers.join()}`
+                );
+              } else if (+task === 10) {
+                alert(
+                  `10. The number of its even divisors is:\n${arrOfPareNumbers.length}`
+                );
+              } else if (+task === 11) {
+                alert(`11. Sum of even divisors is:\n${sumOfPareNumbers}`);
+              }
+            }
+          } else if (+task === 12) {
+            //12
+            let arrOfMultTable = [];
+            for (let i = 1; i <= 10; i++) {
+              for (let y = 1; y <= 10; y++) {
+                let result;
+                result = `${i} * ${y} = ${i * y}\n `;
+                arrOfMultTable.push(result);
+              }
+            }
+
+            for (let x = 0; x <= 90; x += 10) {
+              let z = x + 10;
+              if (x < 90) {
+                alert(
+                  `multiplication table of ${
+                    arrOfMultTable[x][0]
+                  }:\n ${arrOfMultTable.slice(x, z).join("")}`
+                );
+              } else {
+                alert(
+                  `multiplication table of 10:\n ${arrOfMultTable
+                    .slice(x, z)
+                    .join("")}`
+                );
+              }
+            }
+          } else {
+            alert("Wrong task");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

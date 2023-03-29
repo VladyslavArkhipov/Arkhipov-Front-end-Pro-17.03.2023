@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1
+      let arrFromTwentyToThirty = [];
+      for (let i = 20; i <= 30; i += 0.5) {
+        arrFromTwentyToThirty.push(i);
+      }
+      console.log(arrFromTwentyToThirty.join(" "));
+
+      //2
+      let arrOfUah = [];
+      let currentValue = 27;
+      for (let i = 10; i <= 100; i += 10) {
+        let uah = currentValue * i;
+        arrOfUah.push(uah);
+      }
+      console.log(arrOfUah.join(" uah, ") + " uah");
+
+      //3
+      let arrOfNumbersThatSquaring = [];
+      let usersNumberForSquaring = Number(prompt("Enter the number"));
+      for (let i = 1; i <= 100; i++) {
+        if (i ** 2 < usersNumberForSquaring) {
+          arrOfNumbersThatSquaring.push(i);
+        }
+      }
+      console.log(arrOfNumbersThatSquaring.join());
+
+      //4
+      let usersNumberForDividing = Number(prompt("Enter the number"));
+      let arrOfDividers = [];
+      for (let i = 1; i <= usersNumberForDividing; i++) {
+        if (usersNumberForDividing % i === 0) {
+          arrOfDividers.push(i);
+        }
+      }
+      if (arrOfDividers.length > 2) {
+        console.log("not easy number");
+      } else {
+        console.log("easy number");
+      }
+
+      //5
+      let usersNumberForExponentiation = Number(prompt("Enter the number"));
+      let arrOfExponents = [];
+      for (let i = 1; i < usersNumberForExponentiation; i++) {
+        if (Math.pow(3, i) === usersNumberForExponentiation) {
+          arrOfExponents.push(i);
+        }
+      }
+      if (arrOfExponents.length >= 1) {
+        console.log("you can");
+      } else {
+        console.log("you cant");
+      }
+    </script>
+  </body>
+</html>
