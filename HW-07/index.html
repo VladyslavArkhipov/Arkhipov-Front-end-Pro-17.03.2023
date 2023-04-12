@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //First and second and third numbers initialization
+      let firstNumber = prompt("Enter first number").trim();
+      let secondNumber = prompt("Enter second number").trim();
+      let thirdNumber = prompt("Enter third number").trim();
+      //Right numbers checking
+      if (
+        isNaN(firstNumber) ||
+        isNaN(secondNumber) ||
+        isNaN(thirdNumber) ||
+        firstNumber === "" ||
+        secondNumber === "" ||
+        thirdNumber === ""
+      ) {
+        alert("Some of numbers are not a numbers or some of strings are empty");
+      } else {
+        //Average calculating
+        let averageOfNumbers = Math.floor(
+          (+firstNumber + +secondNumber + +thirdNumber) / 3
+        );
+        alert(`Average is ${averageOfNumbers}`);
+      }
+    </script>
+  </body>
+</html>
