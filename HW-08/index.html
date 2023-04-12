@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Birth year initialization
+      let birthYear = prompt("What is your birth year?");
+      //Right birth year or window canceling checking
+      if (birthYear === null) {
+        alert("So sad that that you didn`t enter your birth year");
+      } else if (
+        isNaN(birthYear) ||
+        birthYear.trim() === "" ||
+        birthYear < 1920 ||
+        birthYear > 2022
+      ) {
+        alert("Not correct birth year. Try again.");
+      } else {
+        let city = prompt("What is your city?");
+        //Window canceling checking
+        if (city === null || city === "") {
+          alert("So sad that that you didn`t enter the name of your city");
+        } else {
+          let sport = prompt("What is your favourite sport?");
+          //Window canceling checking
+          if (sport === null || sport === "") {
+            alert("So sad that that you didn`t enter your favourite sport");
+          } else {
+            let age = 2023 - +birthYear;
+            const cities = {
+              kiev: {
+                message: `You are ${age} years old\n You live in the capital of Ukraine`,
+              },
+              washington: {
+                message: `You are ${age} years old\n You live in the capital of USA`,
+              },
+              london: {
+                message: `You are ${age} years old\n You live in the capital of Great Britain`,
+              },
+              defaultMessage: `You are ${age} years old\n You live in ${city}`,
+            };
+            const sports = {
+              football: {
+                message: `Cool! Do you want to be like Lionel Messi?`,
+              },
+              basketball: {
+                message: `Cool! Do you want to be like LeBron James?`,
+              },
+              golf: {
+                message: `Cool! Do you want to be like Tiger Woods?`,
+              },
+              defaultMessage: `You choosed ${sport} as your favourite sport. Do you want to be the best?`,
+            };
+
+            cities[city.toLocaleLowerCase()]
+              ? alert(cities[city.toLocaleLowerCase()].message)
+              : alert(cities.defaultMessage);
+            sports[sport.toLocaleLowerCase()]
+              ? alert(sports[sport.toLocaleLowerCase()].message)
+              : alert(sports.defaultMessage);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
