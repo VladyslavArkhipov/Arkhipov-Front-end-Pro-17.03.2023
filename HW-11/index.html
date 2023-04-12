@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      while (true) {
+        let task = prompt("Enter the number of task");
+        if (task === null) {
+          alert("You canceled window");
+          break;
+        } else {
+          if (+task === 1) {
+            //1
+            let arrFromTwentyToThirty = [];
+            for (let i = 20; i <= 30; i += 0.5) {
+              arrFromTwentyToThirty.push(i);
+            }
+            alert(`Numbers from 20 to 30:\n${arrFromTwentyToThirty.join(" ")}`);
+          } else if (+task === 2) {
+            //2
+            let arrOfUah = [];
+            let currentValue = 27;
+            for (let i = 10; i <= 100; i += 10) {
+              let uah = currentValue * i;
+              arrOfUah.push(`${i}$ = ${uah} uah\n`);
+            }
+            alert(arrOfUah.join(""));
+          } else if (+task === 3) {
+            //3
+            let arrOfNumbersThatSquaring = [];
+            let usersNumberForSquaring = prompt("Enter the number");
+            if (
+              isNaN(Number(usersNumberForSquaring)) ||
+              usersNumberForSquaring.trim() === ""
+            ) {
+              alert("It`s not a number");
+              break;
+            } else {
+              for (let i = 1; i <= 100; i++) {
+                if (i ** 2 < usersNumberForSquaring) {
+                  arrOfNumbersThatSquaring.push(i);
+                }
+              }
+              alert(
+                `Integers from 1 to 100 whose square does not exceed the number:\n${arrOfNumbersThatSquaring.join()}`
+              );
+            }
+          } else if (+task === 4) {
+            //4
+            let usersNumberForDividing = prompt("Enter the number");
+            if (
+              isNaN(Number(usersNumberForDividing)) ||
+              usersNumberForDividing.trim() === ""
+            ) {
+              alert("It`s not a number");
+              break;
+            } else {
+              let arrOfDividers = [];
+              for (let i = 1; i <= usersNumberForDividing; i++) {
+                if (usersNumberForDividing % i === 0) {
+                  arrOfDividers.push(i);
+                }
+              }
+              if (arrOfDividers.length > 2) {
+                alert("Your integer  is not a simple integer ");
+              } else {
+                alert("Your integer  is a simple integer ");
+              }
+            }
+          } else if (+task === 5) {
+            //5
+            let usersNumberForExponentiation = prompt("Enter the number");
+            if (
+              isNaN(Number(usersNumberForExponentiation)) ||
+              usersNumberForExponentiation.trim() === ""
+            ) {
+              alert("It`s not a number");
+              break;
+            } else {
+              let arrOfExponents = [];
+              for (let i = 1; i < +usersNumberForExponentiation; i++) {
+                if (Math.pow(3, i) === +usersNumberForExponentiation) {
+                  arrOfExponents.push(i);
+                }
+              }
+              if (arrOfExponents.length >= 1) {
+                alert(
+                  "You can get this number by raising the number 3 to a certain power"
+                );
+              } else {
+                alert(
+                  "You can`t get this number by raising the number 3 to a certain power"
+                );
+              }
+            }
+          } else {
+            alert("Wrong task");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
