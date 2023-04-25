@@ -1,9 +1,11 @@
+let minHumanAge = 18;
+
 class Human {
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
-  minHumanAge = 18;
+
   getHumanProfile() {
     return `Name: ${this.name} | Age: ${this.age}`;
   }
@@ -20,7 +22,7 @@ class Auto {
   owner = `Empty`;
 
   addOwner(human) {
-    if (human.age < human.minHumanAge) {
+    if (human.age < minHumanAge) {
       return console.log("This human is to young");
     } else {
       return (this.owner = human);
