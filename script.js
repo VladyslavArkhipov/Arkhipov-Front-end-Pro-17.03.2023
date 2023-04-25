@@ -3,6 +3,7 @@ class Human {
     this.name = name;
     this.age = age;
   }
+  minHumanAge = 18;
   getHumanProfile() {
     return `Name: ${this.name} | Age: ${this.age}`;
   }
@@ -19,14 +20,14 @@ class Auto {
   owner = `Empty`;
 
   addOwner(human) {
-    if (human.age < 18) {
+    if (human.age < human.minHumanAge) {
       return console.log("This human is to young");
     } else {
       return (this.owner = human);
     }
   }
 
-  autoInfo() {
+  getAutoInfo() {
     if (this.owner === `Empty`) {
       return console.log(
         `Brand: ${this.brand} | Model: ${this.model} | Year: ${this.year} | Number: ${this.number} | Owner: ${this.owner}`
@@ -50,7 +51,7 @@ console.log(auto1);
 auto1.addOwner(human1);
 console.log(auto1);
 
-auto1.autoInfo();
+auto1.getAutoInfo();
 
 const human2 = new Human("Denis", 14);
 console.log(human2);
@@ -62,4 +63,4 @@ console.log(auto2);
 auto2.addOwner(human2);
 console.log(auto2);
 
-auto2.autoInfo();
+auto2.getAutoInfo();
