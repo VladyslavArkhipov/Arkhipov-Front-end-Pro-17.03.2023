@@ -3,7 +3,7 @@ class Human {
     this.name = name;
     this.age = age;
   }
-  humanProfile() {
+  getHumanProfile() {
     return `Name: ${this.name} | Age: ${this.age}`;
   }
 }
@@ -34,7 +34,7 @@ class Auto {
     } else {
       return console.log(
         `Brand: ${this.brand} | Model: ${this.model} | Year: ${this.year} | Number: ${this.number} | Owner: ` +
-          this.owner.humanProfile()
+          this.owner.getHumanProfile()
       );
     }
   }
@@ -42,7 +42,7 @@ class Auto {
 
 const human1 = new Human("Vlad", 23);
 console.log(human1);
-console.log(human1.humanProfile());
+console.log(human1.getHumanProfile());
 
 const auto1 = new Auto("Honda", "Civic", "2005", "BH5503BX");
 console.log(auto1);
@@ -54,7 +54,7 @@ auto1.autoInfo();
 
 const human2 = new Human("Denis", 14);
 console.log(human2);
-console.log(human2.humanProfile());
+console.log(human2.getHumanProfile());
 
 const auto2 = new Auto("Daewoo", "Lanos", "2000", "BH3412AK");
 console.log(auto2);
