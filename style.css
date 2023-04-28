@@ -8,34 +8,4 @@
   height: 300px;
   padding: 20px;
   background-color: rgb(131, 224, 153);
-  display: flex;
-  justify-content: space-between;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.card p {
-  margin: 30px;
-  font-size: 25px;
-}
-
-button {
-  width: 100px;
-  height: 40px;
-  background-color: blue;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-button:active {
-  box-shadow: 10px 5px 5px black;
 }
