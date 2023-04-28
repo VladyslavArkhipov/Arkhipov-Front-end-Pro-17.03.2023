@@ -3,7 +3,6 @@ const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
 
 let url;
-/* form.action = "https://google.com"; */
 
 input.addEventListener("input", () => {
   console.log(input.value);
