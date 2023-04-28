@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  margin-bottom: 30px;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+table td {
+  width: 30px;
+  height: 30px;
+  border: solid 1px black;
+  text-align: center;
+}
