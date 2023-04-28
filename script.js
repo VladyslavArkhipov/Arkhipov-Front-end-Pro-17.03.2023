@@ -4,11 +4,7 @@ const btn = document.querySelector("#btn");
 
 let url;
 
-input.addEventListener("input", () => {
-  console.log(input.value);
-});
-
-btn.addEventListener("click", (e) => {
+btn.addEventListener("click", () => {
   if (
     input.value.slice(0, 8) !== "https://" ||
     input.value.slice(0, 7) !== "http://"
