@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 300px;
+  background-color: rgb(236, 194, 152);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  height: 200px;
+  width: 150px;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 10px 5px 5px black;
+}
