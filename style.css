@@ -6,6 +6,7 @@
 
 .container {
   height: 300px;
+  padding: 0 500px;
   background-color: rgb(236, 194, 152);
   display: flex;
   justify-content: space-around;
