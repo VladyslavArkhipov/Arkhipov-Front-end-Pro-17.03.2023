@@ -19,6 +19,7 @@ input {
   padding-left: 10px;
   font-size: 20px;
   letter-spacing: 2px;
+  outline: none;
 }
 
 button {
