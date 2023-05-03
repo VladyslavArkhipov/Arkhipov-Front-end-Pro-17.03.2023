@@ -1,27 +1,53 @@
-const form = document.querySelector('#form')
-const input = document.querySelectorAll('.input')
-const btn = document.querySelector('.button')
-const btnClose = document.querySelector('.close')
-const overlay = document.querySelector('.overlay')
-const modal = document.querySelector('.modal')
+const btn = document.querySelector('.save')
+const container = document.querySelector('.container')
+const form = document.querySelector('form')
 
-btn.addEventListener('click', (e)=>{
-  e.preventDefault()
-for(let i =0;i<input.length;i++){
-  if(input[i].value===''){
-    input[i].className='input empty'
-    
-    console.log('Pusto v ' + input[i].name)
-    break;
-  } else{
-    overlay.style.visibility='visible'
-    modal.style.visibility='visible'
-  }
-}
+let info = {}
+
+form.addEventListener('change', (e)=>{
+info[e.target.name] = e.target.value
+
+console.log(info)
 })
 
-
-btnClose.addEventListener('click',()=>{
-  overlay.style.visibility='hidden'
-  modal.style.visibility='hidden'
+btn.addEventListener('click',(e)=>{
+  e.preventDefault()
+  container.style.display='none'
+  let table = document.createElement('div')
+  table.classList.add('table')
+  table.innerHTML=`
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Surname</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Date of birthday</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>City</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Language</th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
+  `;
+  document.body.append(table)
 })

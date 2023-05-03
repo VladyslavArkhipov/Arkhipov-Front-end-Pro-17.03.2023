@@ -3,58 +3,37 @@
   margin: 0;
   padding: 0;
 }
+body{
+  background-color: #83e099;
+}
 
 .container {
   height: 100vh;
   padding: 20px;
-  background-color: #83e099;
+  
+  
   
 }
 
 form{
+  margin: 0 auto;
   width: 400px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }
 
-label,button{
-  margin: 10px;
+input,select,textarea,button, label{
+  margin-bottom: 20px;
 }
 
-button{
-  width: 60px;
-  height: 30px;
+
+th{
+  border: 1px solid black;
 }
 
-.empty{
-  border: 2px solid red;
-}
-
-.modal{
-  width: 300px;
-  height: 300px;
-  margin:  auto auto;
+.table{
   position: absolute;
-  top: calc(50% - 150px) ;
-  left: calc(50% - 150px);
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
-}
-
-.modal , .overlay{
-  visibility: hidden;
+  top: 10%;
+  left: 30%;
+  background-color: yellow;
 }

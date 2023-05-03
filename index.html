@@ -9,46 +9,40 @@
   </head>
   <body>
     <div class="container">
-      <form action="" id="form">
+      <form action="">
+        <input type="text" name="Name" id="" placeholder="Name">
+        <input type="text" name="Surname" id="" placeholder="Surname">
+        <input type="text" name="Date of birthday" id="" placeholder="Date of birthday">
         <label>
-          <input class="input" type="text" placeholder="Name">
+          <input type="radio" name="Gender" id="man" value="man"> Man
         </label>
         <label>
-          <input class="input" type="text" placeholder="Surname">
+          <input type="radio" name="Gender" id="woman" value="woman"> Woman
         </label>
-        <label>
-          <input class="input" type="radio" name="gender"> Woman
-        </label>
-        <label>
-          <input class="input" type="radio" name="gender">  Man
-        </label>
-        <label>
-          <select class="input" aria-placeholder="City">
-            <option value="Odessa">Odessa</option>
-            <option value="Odessa">Lviv</option>
-            <option value="Odessa">Kyiv</option>
-            <option value="Kharkiv">Kharkiv</option>
-          </select>
-        </label>
-        <label>
-          <textarea class="input" placeholder="Address"></textarea>
-        </label>
-        <label><input class="input" type="checkbox" name="language" > English </label>
-        <label>
-          <input class="input" type="checkbox" name="language"> Ulrainian 
-        </label>
-        <label>
-          <input class="input" type="checkbox" name="language"> Another 
-        </label>
-        <button class="button">Save</button>
+        <select name="City" id="">
+          <option value="">City</option>
+          <option value="Odessa">Odessa</option>
+          <option value="Lviv">Lviv</option>
+          <option value="Kyiv">Kyiv</option>
+        </select>
+          <textarea placeholder="Address" name="Address" id="" cols="30" rows="10"></textarea>
+          <label>
+            <input type="checkbox" name="Language" value="english" id=""> english
+          </label>
+          <label>
+            <input type="checkbox" name="Language" value="ukrainian" id=""> ukrainian
+          </label>
+          <label>
+            <input type="checkbox" name="Language" value="another" id=""> another
+          </label>
+          <button class="save">Save</button>
+        
       </form>
     </div>
 
-    <div class="overlay"></div>
-    <div class="modal">
-      <h1>Success</h1>
-      <button class='close'>Close</button>
-    </div>
+
+    
+    
     <script src="./script.js"></script>
   </body>
 </html>
