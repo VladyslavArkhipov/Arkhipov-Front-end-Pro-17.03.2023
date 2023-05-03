@@ -1,33 +1,27 @@
-const btn = document.querySelectorAll(".btn");
-const firstPerson = document.querySelector("#first_count");
-const secondPerson = document.querySelector("#second_count");
-const thirdPerson = document.querySelector("#third_count");
-const fourthPerson = document.querySelector("#fourth_count");
-const fifthPerson = document.querySelector("#fifth_count");
+const form = document.querySelector('#form')
+const input = document.querySelectorAll('.input')
+const btn = document.querySelector('.button')
+const btnClose = document.querySelector('.close')
+const overlay = document.querySelector('.overlay')
+const modal = document.querySelector('.modal')
 
-function votesCounting() {
-  for (let i = 0; i < btn.length; i++) {
-    let count = 1;
-    btn[i].onclick = function () {
-      switch (i) {
-        case 0:
-          firstPerson.textContent = `${count++}`;
-          break;
-        case 1:
-          secondPerson.textContent = `${count++}`;
-          break;
-        case 2:
-          thirdPerson.textContent = `${count++}`;
-          break;
-        case 3:
-          fourthPerson.textContent = `${count++}`;
-          break;
-        case 4:
-          fifthPerson.textContent = `${count++}`;
-          break;
-      }
-    };
+btn.addEventListener('click', (e)=>{
+  e.preventDefault()
+for(let i =0;i<input.length;i++){
+  if(input[i].value===''){
+    input[i].className='input empty'
+    
+    console.log('Pusto v ' + input[i].name)
+    break;
+  } else{
+    overlay.style.visibility='visible'
+    modal.style.visibility='visible'
   }
 }
+})
 
-votesCounting();
+
+btnClose.addEventListener('click',()=>{
+  overlay.style.visibility='hidden'
+  modal.style.visibility='hidden'
+})
