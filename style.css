@@ -5,37 +5,75 @@
 }
 
 .container {
-  height: 300px;
   padding: 20px;
+  height: 100vh;
   background-color: rgb(131, 224, 153);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.card {
+.card{
+  height: 450px;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(255, 166, 0);
+}
+img, p, h2{
+  margin-bottom: 20px;
+}
+
+p,button{
+  font-size: 20px;
+}
+
+.card button{
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.buy{
+  padding: 20px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  justify-content: center;
+}
+
+
+
+form{
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: yellow;
 }
 
-.card p {
-  margin: 30px;
-  font-size: 25px;
+form input, form select, form button, form label{
+  margin-top: 20px;
 }
 
-button {
-  width: 100px;
-  height: 40px;
-  background-color: blue;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  font-size: 25px;
+form p {
+  color: red;
+  font-size: 18px;
 }
 
-button:active {
-  box-shadow: 10px 5px 5px black;
+.order_info{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 200px);
+  background-color: yellow;
 }
