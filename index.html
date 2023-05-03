@@ -9,31 +9,45 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <p>🤑</p>
-        <button class="btn">Vote</button>
-        <p>Voices: <span id="first_count">0</span></p>
-      </div>
-      <div class="card">
-        <p>😎</p>
-        <button class="btn">Vote</button>
-        <p>Voices: <span id="second_count">0</span></p>
-      </div>
-      <div class="card">
-        <p>🤓</p>
-        <button class="btn">Vote</button>
-        <p>Voices: <span id="third_count">0</span></p>
-      </div>
-      <div class="card">
-        <p>😑</p>
-        <button class="btn">Vote</button>
-        <p>Voices: <span id="fourth_count">0</span></p>
-      </div>
-      <div class="card">
-        <p>🤠</p>
-        <button class="btn">Vote</button>
-        <p>Voices: <span id="fifth_count">0</span></p>
-      </div>
+      <form action="" id="form">
+        <label>
+          <input class="input" type="text" placeholder="Name">
+        </label>
+        <label>
+          <input class="input" type="text" placeholder="Surname">
+        </label>
+        <label>
+          <input class="input" type="radio" name="gender"> Woman
+        </label>
+        <label>
+          <input class="input" type="radio" name="gender">  Man
+        </label>
+        <label>
+          <select class="input" aria-placeholder="City">
+            <option value="Odessa">Odessa</option>
+            <option value="Odessa">Lviv</option>
+            <option value="Odessa">Kyiv</option>
+            <option value="Kharkiv">Kharkiv</option>
+          </select>
+        </label>
+        <label>
+          <textarea class="input" placeholder="Address"></textarea>
+        </label>
+        <label><input class="input" type="checkbox" name="language" > English </label>
+        <label>
+          <input class="input" type="checkbox" name="language"> Ulrainian 
+        </label>
+        <label>
+          <input class="input" type="checkbox" name="language"> Another 
+        </label>
+        <button class="button">Save</button>
+      </form>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="modal">
+      <h1>Success</h1>
+      <button class='close'>Close</button>
     </div>
     <script src="./script.js"></script>
   </body>

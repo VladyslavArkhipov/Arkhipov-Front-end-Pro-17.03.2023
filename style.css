@@ -5,37 +5,56 @@
 }
 
 .container {
-  height: 300px;
+  height: 100vh;
   padding: 20px;
-  background-color: rgb(131, 224, 153);
-  display: flex;
-  justify-content: space-between;
+  background-color: #83e099;
+  
 }
 
-.card {
+form{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+label,button{
+  margin: 10px;
+}
+
+button{
+  width: 60px;
+  height: 30px;
+}
+
+.empty{
+  border: 2px solid red;
+}
+
+.modal{
+  width: 300px;
+  height: 300px;
+  margin:  auto auto;
+  position: absolute;
+  top: calc(50% - 150px) ;
+  left: calc(50% - 150px);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.card p {
-  margin: 30px;
-  font-size: 25px;
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
 }
 
-button {
-  width: 100px;
-  height: 40px;
-  background-color: blue;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-button:active {
-  box-shadow: 10px 5px 5px black;
+.modal , .overlay{
+  visibility: hidden;
 }
