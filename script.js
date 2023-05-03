@@ -57,6 +57,8 @@ btnSubmit.addEventListener('click', (e)=>{
     e.preventDefault()
     let divInfo = document.createElement('div')
     divInfo.innerHTML=`<h2>Деталi замовлення:</h2>
+    <p>Товар: OCEAUNZ LEAGUE BALL.</p>
+    <p>Вартiсть: 35€.</p>
     <p>Покупець: ${values[0]}.</p>
     <p>Мiсто доставки: ${values[1]}.</p>
     <p>Вiддiлення НП: ${values[2]}.</p>
