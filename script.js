@@ -68,7 +68,7 @@ btnSubmit.addEventListener('click', (e)=>{
     `
     divInfo.classList.add('order_info')
     document.body.append(divInfo)
-    console.log(divInfo)
+    
   }
 })
 
