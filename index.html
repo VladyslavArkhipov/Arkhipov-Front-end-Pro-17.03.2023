@@ -8,117 +8,84 @@
     <title>Document</title>
   </head>
   <body>
-    
-      <header>
-        <div class="header_container">
-          <div class="header_wrapper">
-            <div class="logo">
-              <a href="#"><img src="./img/logo.png" alt="logo"></a>
-            </div>
-            <div class="header_search">
-              <input type="text" placeholder="Search Products, categories ...">
-              <button><img src="./img/search.png" alt="search"></button>
-            </div>
-            <div class="header_user">
-              <div class="user_profile">
-                <a href="#"><img src="./img/profile.png" alt="profile"></a>
-              </div>
-              <div class="orders">
-                <a href="#"><img src="./img/order.png" alt="order"></a>
-              </div>
-            </div>
+    <header>
+      <div class="wrapper nav">
+        <div class="navs">
+          <div class="order_icon"><button class="show_orders">
+            <img src="./img/order.png" alt="orders">
+          </button>
           </div>
         </div>
-      </header>
-    
-      <nav>
-        <div class="nav_container">
-          <div class="nav_wrapper">
-            <ul class="nav_menu">
-              <li>Bakery <button><img src="./img/list.png"></button></li>
-              <li>Fruit and vegetables <button><img src="./img/list.png"></button></li>
-              <li>Meat and fish <button><img src="./img/list.png"></button></li>
-              <li>Drinks <button><img src="./img/list.png"></button></li>
-              <li>Kitchen <button><img src="./img/list.png"></button></li>
-              <li>Special nutrition <button><img src="./img/list.png"></button></li>
-              <li>Baby <button><img src="./img/list.png"></button></li>
-              <li>Pharmacy <button><img src="./img/list.png"></button></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      </div>
+    </header>
 
-      <main>
-        <div class="main_container">
-          <div class="main_wrapper">
-            <div class="categories">
-              <h3>Category menu</h3>
-              <ul>
-                <li><a>Bakery</a></li>
-                <li><a>Fruit and vegetables</a></li>
-                <li><a>Meat and fish</a></li>
-                <li><a>Drinks</a></li>
-                <li><a>Kitchen</a></li>
-              </ul>
-              <button>More categories <img src="./img/button_black.png" alt=""></button>
-            </div>
-            <div class="card">
-              <h4>Banner subfocus</h4>
-              <h2>Space for heading</h2>
-              <button>Read recepies <img src="./img/button_green.png" alt=""></button>
-            </div>
-            <div class="card">
-              <h4>Banner subfocus</h4>
-              <h2>Space for heading</h2>
-              <button>Read recepies <img src="./img/button_green.png" alt=""></button>
-            </div>
-          </div>
+    <div class="wrapper main">
+      <div class="row">
+        <div class="categories">
+          <h2>Best selling products</h2>
+          <ul>
+            <li><a href="">Kitchen</a></li>
+            <li><a href="">Meat and fish</a></li>
+            <li><a href="">Special nutrition</a></li>
+            <li><a href="">Pharmacy</a></li>
+            <li><a href="">Baby</a></li>
+          </ul>
+          <button>More products</button>
         </div>
-        <div class="main_container">
-          <div class="main_wrapper">
-            <div class="categories">
-              <h3>Best selling products</h3>
-              <ul>
-                <li><a>Kitchen</a></li>
-                <li><a>Meat and fish</a></li>
-                <li><a>Special nutrition</a></li>
-                <li><a>Pharmacy</a></li>
-                <li><a>Baby</a></li>
-              </ul>
-              <button>More products <img src="./img/button_black.png" alt=""></button>
-            </div>
-            <div class="items_wrapper">
-              <div class="item">
-                <div class="image"></div>
-                <p class="title">Product Title</p>
-                <p class="normal">Space for a small product description </p>
-                  <div class="price_buy">
-                    <p class="price">1.48 USD</p>
-                    <button class="buy">Buy now</button>
-                  </div>
-              </div>
-              <div class="item">
-                <div class="image"></div>
-                <p class="title">Product Title</p>
-                <p class="normal">Space for a small product description </p>
-                  <div class="price_buy">
-                    <p class="price">1.48 USD</p>
-                    <button class="buy">Buy now</button>
-                  </div>
-              </div>
-              <div class="item">
-                <div class="image"></div>
-                <p class="title">Product Title</p>
-                <p class="normal">Space for a small product description </p>
-                  <div class="price_buy">
-                    <p class="price">1.48 USD</p>
-                    <button class="buy">Buy now</button>
-                  </div>
-              </div>
-            </div>
-          </div>
+
+        <div class="card">
+          <div class="image"><img src="./img/potato.jpg" alt=""></div>
+          <h2 class="product_title">Potato</h2>
+          <p class="product_info" >Potato description </p>
+          <p class="product_price">1.50 USD</p>
+          <button class="buy">Buy now</button>
         </div>
-      </main>
+
+        <div class="card">
+          <div class="image"><img src="./img/carrot.jpg" alt=""></div>
+          <h2 class="product_title">Carrot</h2>
+          <p class="product_info">Carrot description </p>
+          <p class="product_price">1.30 USD</p>
+          <button class="buy">Buy now</button>
+        </div>
+
+        <div class="card">
+          <div class="image"><img src="./img/paprika.jpg" alt=""></div>
+          <h2 class="product_title">Paprika</h2>
+          <p class="product_info">Paprika description </p>
+          <p class="product_price">1.20 USD</p>
+          <button class="buy">Buy now</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="wrapper orders">
+      <h1>ORDERS</h1>
+    </div>
+
+    <div class="wrapper buy_window">
+      <form action="">
+        <input type="text" name="name" id="0" placeholder="Name"  >
+        <select name="city" id="1">
+          <option value="">Choose city</option>
+          <option value="Odessa">Odessa</option>
+          <option value="Kyiv">Kyiv </option>
+          <option value="Lviv">Lviv</option>
+        </select>
+        <input name="post_office" type="number" name="store" id="2" placeholder="Post office №"  >
+        <select name="pay" id="3">
+          <option value="">Choose payment</option>
+          <option value="card">Card</option>
+          <option value="cash">Cash</option>
+        </select>
+        <input name="count" type="number" placeholder="Count"  id='4' >
+        <input type="text" name="details" placeholder="Details" id='5' >
+        <button class='submit'>Submit</button>
+        <button class='decline'>Decline</button>
+      </form>
+    </div>
+      
     <script src="./script.js"></script>
   </body>
 </html>
