@@ -5,7 +5,9 @@ let postId; // Переменная в которой будет хранить�
 const minPostId = 1; // Минимальный номер поста
 const maxPostId = 100; // Максимальный номер поста
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", showPost);
+
+function showPost(e) {
   e.preventDefault(); // Отменяю стандартное поведение кнопки
   const formData = new FormData(form); // Создаю объект типа ФОРМДАТА для получения ввода инпута, который соответстует номеру поста
   postId = formData.get("postId");
@@ -17,7 +19,7 @@ form.addEventListener("submit", (e) => {
   } else {
     alert("Номер поста должен быть от 1 до 100");
   }
-});
+}
 
 function postCreating(json) {
   postWrapper.innerHTML = `
@@ -33,6 +35,13 @@ function postCreating(json) {
   commentsWrapper.innerHTML = ""; // Очищаю блок с комментариями на тот случай если там были комменты от предыдущего поста
 }
 
+function showComments() {
+  fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+    .then((response) => response.json())
+    .then(commentsCreating) // Делаю запрос на сервер чтобы получить массив комментариев и в случае ошибки вывожу ошибку через алерт
+    .catch((e) => alert("Ошибка соединения с сервером / " + e.message));
+}
+
 function commentsCreating(json) {
   for (let i = 0; i < json.length; i++) {
     let div = document.createElement("div");
@@ -45,11 +54,4 @@ function commentsCreating(json) {
     `;
     commentsWrapper.append(div); // Прохожусь по массиву обьектов полученных от сервера и подставляю каждое значение туда куда нужно и создаю блок с комментом
   }
-}
-
-function showComments() {
-  fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-    .then((response) => response.json())
-    .then(commentsCreating) // Делаю запрос на сервер чтобы получить массив комментариев и в случае ошибки вывожу ошибку через алерт
-    .catch((e) => alert("Ошибка соединения с сервером / " + e.message));
 }
