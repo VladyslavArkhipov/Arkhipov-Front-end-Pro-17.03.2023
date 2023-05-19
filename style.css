@@ -30,10 +30,23 @@ input,.btn{
   background-color: rgb(243, 241, 238);
 }
 
+.weather{
+  
+  
+  background-color: rgb(233, 233, 211);
+}
+
 .container{
   display: flex;
+  padding: 30px 0px;
+  margin: 0px auto;
 }
+
 .col{
   width: 50%;
   text-align: center;
+}
+
+p{
+  margin: 10px;
 }
