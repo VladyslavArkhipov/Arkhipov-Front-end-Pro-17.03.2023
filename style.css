@@ -14,7 +14,7 @@ form{
   margin-bottom: 50px;
 }
 
-input,.btn, .show_comments{
+input,.btn{
   border-radius: 12px;
   padding: 10px;
   border: 1px solid gray;
@@ -30,35 +30,10 @@ input,.btn, .show_comments{
   background-color: rgb(243, 241, 238);
 }
 
-
-.post,.comments{
-  background-color: rgb(243, 241, 238);
+.container{
+  display: flex;
 }
-
-.post p,.post h1{
-  margin-bottom: 20px;
-}
-
-.show_comments{
-  border: 1px solid black;
-  margin: 0px 39%;
-  cursor: pointer;
-}
-
-
-
-.comment{
-  margin-bottom: 30px;
-  border-bottom: 1px solid black;
-}
-
-.comment p{
-  margin-bottom: 10px;
-}
-
-.comment_user_email{
-  color: gray;
-}
-.comment_text{
-  font-size: 18px;
+.col{
+  width: 50%;
+  text-align: center;
 }
