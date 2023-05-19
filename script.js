@@ -19,6 +19,7 @@ function showPost(e) {
   } else {
     alert("Номер поста должен быть от 1 до 100");
   }
+  commentsWrapper.innerHTML = ""; // Очищаю блок с комментариями на тот случай если там были комменты от предыдущего поста
 }
 
 function postCreating(json) {
@@ -32,10 +33,10 @@ function postCreating(json) {
   postWrapper.style.padding = "20px";
   const cmntBtn = document.querySelector(".show_comments"); // Нахожу кнопку для показа комментов
   cmntBtn.addEventListener("click", showComments); // При клике показываю комментарии
-  commentsWrapper.innerHTML = ""; // Очищаю блок с комментариями на тот случай если там были комменты от предыдущего поста
 }
 
 function showComments() {
+  commentsWrapper.innerHTML = ""; // Очищаю блок с комментариями на тот случай если там были комменты от предыдущего поста
   fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
     .then((response) => response.json())
     .then(commentsCreating) // Делаю запрос на сервер чтобы получить массив комментариев и в случае ошибки вывожу ошибку через алерт
@@ -43,15 +44,15 @@ function showComments() {
 }
 
 function commentsCreating(json) {
-  for (let i = 0; i < json.length; i++) {
+  json.forEach((e) => {
     let div = document.createElement("div");
     div.className = "comment";
     div.style.padding = "20px";
     div.innerHTML = `
-    <p class="comment_user_name"><b>Name: </b>${json[i].name}</p>
-      <p class="comment_user_email"><span class="email">E-Mail: </span>${json[i].email}</p>
-      <p class="comment_text"><b>Comment: </b>${json[i].body}</p>
+    <p class="comment_user_name"><b>Name: </b>${e.name}</p>
+      <p class="comment_user_email"><span class="email">E-Mail: </span>${e.email}</p>
+      <p class="comment_text"><b>Comment: </b>${e.body}</p>
     `;
     commentsWrapper.append(div); // Прохожусь по массиву обьектов полученных от сервера и подставляю каждое значение туда куда нужно и создаю блок с комментом
-  }
+  });
 }
