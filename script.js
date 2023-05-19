@@ -25,14 +25,18 @@ function showPost(e) {
 function postCreating(json) {
   postWrapper.innerHTML = `
     <p class="post_user_id">user: ${json.userId}</p>
-    <h1 class="post_title">${json.title}</h1>
-    <p class="post_text">${json.body} </p>
+    <h1 class="post_title">${validString(json.title)}</h1>
+    <p class="post_text">${validString(json.body)} </p>
     <button class='show_comments'>Show comments</button> 
 `; // Из полученного после запроса объекта я получаю по ключам необходимые значения и подставляю
   postWrapper.style.marginBottom = "50px";
   postWrapper.style.padding = "20px";
   const cmntBtn = document.querySelector(".show_comments"); // Нахожу кнопку для показа комментов
   cmntBtn.addEventListener("click", showComments); // При клике показываю комментарии
+}
+
+function validString(str) {
+  return (str = str[0].toUpperCase() + str.substring(1));
 }
 
 function showComments() {
@@ -49,9 +53,11 @@ function commentsCreating(json) {
     div.className = "comment";
     div.style.padding = "20px";
     div.innerHTML = `
-    <p class="comment_user_name"><b>Name: </b>${e.name}</p>
-      <p class="comment_user_email"><span class="email">E-Mail: </span>${e.email}</p>
-      <p class="comment_text"><b>Comment: </b>${e.body}</p>
+    <p class="comment_user_name"><b>Name: </b>${validString(e.name)}</p>
+      <p class="comment_user_email"><span class="email">E-Mail: </span>${
+        e.email
+      }</p>
+      <p class="comment_text"><b>Comment: </b>${validString(e.body)}</p>
     `;
     commentsWrapper.append(div); // Прохожусь по массиву обьектов полученных от сервера и подставляю каждое значение туда куда нужно и создаю блок с комментом
   });
