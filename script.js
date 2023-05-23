@@ -49,53 +49,52 @@ function weatherCreating(json) {
       </div>
     </div>
   `;
-  console.log(json);
 }
 
 function validString(str) {
-  return (str = str[0].toUpperCase() + str.substring(1));
+  return (str = str[0].toUpperCase() + str.substring(1)); //Делаю так чтобы первая буква в строке была большой
 }
 
 function temperatureConvertation(currentTemperatureInKelvin) {
-  const degree = Math.floor(currentTemperatureInKelvin - 273.15);
+  const degree = Math.floor(currentTemperatureInKelvin - 273.15); //С сервера мы получаем температуру в Кельвинах и я ее конвертирую в цельсии
   return degree;
 }
 
 function windDescription(windDegree) {
   if (
-    (windDegree >= 0 && windDegree <= 10) ||
+    (windDegree >= 0 && windDegree <= 12) ||
     (windDegree >= 350 && windDegree <= 360)
   ) {
     return `Пiвнiчний`;
-  } else if (windDegree >= 20 && windDegree <= 30) {
+  } else if (windDegree >= 13 && windDegree <= 34) {
     return `Пiвнiчний/Пiвнiчно-схiдний`;
-  } else if (windDegree >= 40 && windDegree <= 50) {
+  } else if (windDegree >= 35 && windDegree <= 57) {
     return `Пiвнiчно-схiдний`;
-  } else if (windDegree >= 60 && windDegree <= 70) {
+  } else if (windDegree >= 58 && windDegree <= 79) {
     return `Cхiдний/Пiвнiчно-схiдний`;
-  } else if (windDegree >= 80 && windDegree <= 100) {
+  } else if (windDegree >= 80 && windDegree <= 102) {
     return `Cхiдний`;
-  } else if (windDegree >= 110 && windDegree <= 120) {
+  } else if (windDegree >= 103 && windDegree <= 124) {
     return `Cхiдний/Пiвденно-схiдний`;
-  } else if (windDegree >= 130 && windDegree <= 140) {
+  } else if (windDegree >= 125 && windDegree <= 147) {
     return `Пiвденно-схiдний`;
-  } else if (windDegree >= 150 && windDegree <= 160) {
+  } else if (windDegree >= 148 && windDegree <= 169) {
     return `Пiвденний/Пiвденно-схiдний`;
-  } else if (windDegree >= 170 && windDegree <= 190) {
+  } else if (windDegree >= 170 && windDegree <= 192) {
     return `Пiвденний`;
-  } else if (windDegree >= 200 && windDegree <= 210) {
+  } else if (windDegree >= 193 && windDegree <= 214) {
     return `Пiвденний/Пiвденно-захiдний`;
-  } else if (windDegree >= 220 && windDegree <= 230) {
+  } else if (windDegree >= 215 && windDegree <= 237) {
     return `Пiвденно-захiдний`;
-  } else if (windDegree >= 240 && windDegree <= 250) {
+  } else if (windDegree >= 238 && windDegree <= 259) {
     return `Захiдний/Пiвденно-захiдний`;
-  } else if (windDegree >= 260 && windDegree <= 280) {
+  } else if (windDegree >= 260 && windDegree <= 282) {
     return `Захiдний`;
-  } else if (windDegree >= 290 && windDegree <= 300) {
+  } else if (windDegree >= 283 && windDegree <= 304) {
     return `Захiдний/Пiвнiчно-захiдний`;
-  } else if (windDegree >= 310 && windDegree <= 320) {
+  } else if (windDegree >= 305 && windDegree <= 327) {
     return `Пiвнiчно-захiдний`;
-  } else if (windDegree >= 330 && windDegree <= 340) {
+  } else if (windDegree >= 328 && windDegree <= 349) {
     return `Пiвнiчний/Пiвнiчно-захiдний`;
   }
-}
+} // С сервера мы получаем направлении ветра в градусах. По таблице Розы Ветров я составил условие для определения текстового описания направления ветра
