@@ -61,40 +61,37 @@ function temperatureConvertation(currentTemperatureInKelvin) {
 }
 
 function windDescription(windDegree) {
-  if (
-    (windDegree >= 0 && windDegree <= 12) ||
-    (windDegree >= 350 && windDegree <= 360)
-  ) {
+  if (windDegree <= 12 || (windDegree > 349 && windDegree <= 360)) {
     return `Пiвнiчний`;
   } else if (windDegree >= 13 && windDegree <= 34) {
     return `Пiвнiчний/Пiвнiчно-схiдний`;
-  } else if (windDegree >= 35 && windDegree <= 57) {
+  } else if (windDegree > 34 && windDegree <= 57) {
     return `Пiвнiчно-схiдний`;
-  } else if (windDegree >= 58 && windDegree <= 79) {
+  } else if (windDegree > 57 && windDegree <= 79) {
     return `Cхiдний/Пiвнiчно-схiдний`;
-  } else if (windDegree >= 80 && windDegree <= 102) {
+  } else if (windDegree > 79 && windDegree <= 102) {
     return `Cхiдний`;
-  } else if (windDegree >= 103 && windDegree <= 124) {
+  } else if (windDegree > 102 && windDegree <= 124) {
     return `Cхiдний/Пiвденно-схiдний`;
-  } else if (windDegree >= 125 && windDegree <= 147) {
+  } else if (windDegree > 124 && windDegree <= 147) {
     return `Пiвденно-схiдний`;
-  } else if (windDegree >= 148 && windDegree <= 169) {
+  } else if (windDegree > 147 && windDegree <= 169) {
     return `Пiвденний/Пiвденно-схiдний`;
-  } else if (windDegree >= 170 && windDegree <= 192) {
+  } else if (windDegree > 169 && windDegree <= 192) {
     return `Пiвденний`;
-  } else if (windDegree >= 193 && windDegree <= 214) {
+  } else if (windDegree > 192 && windDegree <= 214) {
     return `Пiвденний/Пiвденно-захiдний`;
-  } else if (windDegree >= 215 && windDegree <= 237) {
+  } else if (windDegree > 214 && windDegree <= 237) {
     return `Пiвденно-захiдний`;
-  } else if (windDegree >= 238 && windDegree <= 259) {
+  } else if (windDegree > 237 && windDegree <= 259) {
     return `Захiдний/Пiвденно-захiдний`;
-  } else if (windDegree >= 260 && windDegree <= 282) {
+  } else if (windDegree > 259 && windDegree <= 282) {
     return `Захiдний`;
-  } else if (windDegree >= 283 && windDegree <= 304) {
+  } else if (windDegree > 282 && windDegree <= 304) {
     return `Захiдний/Пiвнiчно-захiдний`;
-  } else if (windDegree >= 305 && windDegree <= 327) {
+  } else if (windDegree > 304 && windDegree <= 327) {
     return `Пiвнiчно-захiдний`;
-  } else if (windDegree >= 328 && windDegree <= 349) {
+  } else if (windDegree > 327 && windDegree <= 349) {
     return `Пiвнiчний/Пiвнiчно-захiдний`;
   }
 } // С сервера мы получаем направлении ветра в градусах. По таблице направления ветра я составил условие для определения текстового описания направления ветра
